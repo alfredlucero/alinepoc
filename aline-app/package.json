@@ -17,6 +17,7 @@
     "start": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds\""
   },
   "dependencies": {
+    "@shoelace-style/shoelace": "^2.0.0-beta.86",
     "lit": "^2.0.2"
   },
   "devDependencies": {

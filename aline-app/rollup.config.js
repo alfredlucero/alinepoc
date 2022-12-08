@@ -64,6 +64,7 @@ export default {
             },
           },
         ],
+        // TODO: figure out rollup with shoelace
       ],
     }),
     /** Create and inject a service worker */

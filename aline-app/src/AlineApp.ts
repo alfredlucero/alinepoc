@@ -1,10 +1,11 @@
 import { LitElement, html, css } from 'lit';
 import { property } from 'lit/decorators.js';
+import '@shoelace-style/shoelace/dist/components/button/button.js';
 
 const logo = new URL('../../assets/open-wc-logo.svg', import.meta.url).href;
 
 export class AlineApp extends LitElement {
-  @property({ type: String }) title = 'My app';
+  @property({ type: String }) title = 'Aline';
 
   static styles = css`
     :host {
@@ -62,18 +63,19 @@ export class AlineApp extends LitElement {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Code examples
+          Code examples from me
         </a>
       </main>
 
       <p class="app-footer">
-        🚽 Made with love by
+        🚽 Made with love by pogski
         <a
           target="_blank"
           rel="noopener noreferrer"
           href="https://github.com/open-wc"
           >open-wc</a
         >.
+        <sl-button variant="primary">Primary Shoelace Buttosn</sl-button>
       </p>
     `;
   }
