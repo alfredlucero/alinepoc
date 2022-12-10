@@ -32,5 +32,5 @@ const Template: Story<ArgTypes> = ({
 
 export const App = Template.bind({});
 App.args = {
-  title: 'My app',
+  title: 'Aline',
 };

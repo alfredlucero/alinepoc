@@ -63,7 +63,7 @@ export class AlineApp extends LitElement {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Code examples from me
+          Code examples from meee
         </a>
       </main>
 
@@ -77,6 +77,8 @@ export class AlineApp extends LitElement {
         >.
         <sl-button variant="primary">Primary Shoelace Buttosn</sl-button>
       </p>
+
+      <slot></slot>
     `;
   }
 }

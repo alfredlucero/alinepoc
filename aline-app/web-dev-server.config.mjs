@@ -6,11 +6,12 @@ const hmr = process.argv.includes('--hmr');
 export default /** @type {import('@web/dev-server').DevServerConfig} */ ({
   open: '/',
   watch: !hmr,
+  appIndex: 'index.html',
   /** Resolve bare module imports */
   nodeResolve: {
     exportConditions: ['browser', 'development'],
   },
-  
+
   /** Compile JS for older browsers. Requires @web/dev-server-esbuild plugin */
   // esbuildTarget: 'auto'
 
