@@ -76,7 +76,8 @@
       "import/no-extraneous-dependencies": "warn",
       "class-methods-use-this": "off",
       "global-require": "warn",
-      "consistent-return": "warn"
+      "consistent-return": "warn",
+      "max-classes-per-file": "off"
     }
   },
   "prettier": {

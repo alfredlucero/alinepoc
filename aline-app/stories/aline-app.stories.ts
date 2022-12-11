@@ -1,4 +1,5 @@
-import { html, TemplateResult } from 'lit';
+import { html } from 'lit';
+import { Story } from './storyTypes.js';
 import '../src/aline-app.js';
 
 export default {
@@ -8,12 +9,6 @@ export default {
     backgroundColor: { control: 'color' },
   },
 };
-
-interface Story<T> {
-  (args: T): TemplateResult;
-  args?: Partial<T>;
-  argTypes?: Record<string, unknown>;
-}
 
 interface ArgTypes {
   title: string;
