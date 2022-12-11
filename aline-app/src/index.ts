@@ -1,6 +1,8 @@
-import { Router } from '@vaadin/router';
+import { Router, Commands, Context } from '@vaadin/router';
 
-export const router = new Router(document.getElementById('aline-outlet'));
+export const router: Router = new Router(
+  document.getElementById('aline-outlet')
+);
 router.setRoutes([
   {
     path: '',
@@ -10,9 +12,19 @@ router.setRoutes([
     },
   },
   {
+    path: 'login',
+    component: 'login-page',
+    action: async () => {
+      await import('./login-page.js');
+    },
+  },
+  {
     path: 'offboarding/templates',
     component: 'offboarding-templates',
-    action: async () => {
+    action: async (context: Context, commands: Commands) => {
+      if (sessionStorage.getItem('aline_authenticated') !== 'true') {
+        return commands.redirect('/login');
+      }
       await import('./offboarding-templates.js');
     },
   },

@@ -72,7 +72,11 @@
         {
           "ignorePackages": true
         }
-      ]
+      ],
+      "import/no-extraneous-dependencies": "warn",
+      "class-methods-use-this": "off",
+      "global-require": "warn",
+      "consistent-return": "warn"
     }
   },
   "prettier": {
