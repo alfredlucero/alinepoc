@@ -40,6 +40,11 @@ export class OffboardingTemplates extends LitElement {
   }
 
   static styles = css`
+    .templates-header {
+      display: flex;
+      justify-content: flex-end;
+    }
+
     .templates-container {
       min-height: 100vh;
       min-width: 100vw;
@@ -69,6 +74,15 @@ export class OffboardingTemplates extends LitElement {
     return html`
       <main>
         <h1>Aline > Offboarding > Templates</h1>
+        <div class="templates-header">
+          <sl-button
+            type="button"
+            variant="primary"
+            @click=${this.handleCreateClick}
+          >
+            Create a New Template
+          </sl-button>
+        </div>
         <div class="templates-container">
           ${this.templates.map(
             template => html`
@@ -81,6 +95,10 @@ export class OffboardingTemplates extends LitElement {
         </div>
       </main>
     `;
+  }
+
+  handleCreateClick() {
+    Router.go('/offboarding/templates/new');
   }
 
   handleTemplateDropdownSelect(e: CustomEvent<{ item: HTMLElement }>) {
