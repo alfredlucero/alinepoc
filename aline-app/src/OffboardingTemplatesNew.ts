@@ -102,11 +102,6 @@ export class OffboardingTemplatesNew extends LitElement {
             type="text"
           >
           </sl-input>
-          <sl-input
-            label="What would you like to name this offboarding template?"
-            type="text"
-          >
-          </sl-input>
           <sl-textarea
             label="What general description and guidelines would you like to add for offboardees to see?"
           >
@@ -184,7 +179,7 @@ export class OffboardingTemplatesNew extends LitElement {
             <sl-button type="button" @click=${this.handlePreviewClick}
               >Preview</sl-button
             >
-            <sl-button type="submit">Publish</sl-button>
+            <sl-button type="submit" variant="primary">Publish</sl-button>
           </div>
         </form>
       </main>
