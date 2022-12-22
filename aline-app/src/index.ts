@@ -49,4 +49,18 @@ router.setRoutes([
       await import('./boarding-steps.js');
     },
   },
+  {
+    path: 'boarding/steps/new',
+    component: 'boarding-steps-new',
+    action: async () => {
+      await import('./boarding-steps-new.js');
+    },
+  },
+  {
+    path: 'boarding/steps/:id',
+    component: 'boarding-steps-details',
+    action: async () => {
+      await import('./boarding-steps-details.js');
+    },
+  },
 ]);
