@@ -42,4 +42,11 @@ router.setRoutes([
       await import('./offboarding-templates-details.js');
     },
   },
+  {
+    path: 'boarding/steps',
+    component: 'boarding-steps',
+    action: async () => {
+      await import('./boarding-steps.js');
+    },
+  },
 ]);
